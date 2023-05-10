@@ -1,26 +1,17 @@
-import { createVuetify, ThemeDefinition } from "vuetify"
+import { createVuetify } from "vuetify"
 import { aliases, mdi } from "vuetify/iconsets/mdi"
 
-export default defineNuxtPlugin((app) => {
-  const mainnetDark: ThemeDefinition = {
-    dark: true,
-    colors: {
-      primary: "#FAFAFA",
-      dark: "#212121",
-      secondary: "#FF005C",
-    },
-  }
+import { dark } from "~/utils/themes"
 
+export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
     ssr: true,
-    defaults,
     theme: {
-      defaultTheme: "mainnetDark",
+      defaultTheme: "dark",
       themes: {
-        mainnetDark,
+        dark,
       },
     },
-    // Add the custom iconset
     icons: {
       defaultSet: "mdi",
       aliases,

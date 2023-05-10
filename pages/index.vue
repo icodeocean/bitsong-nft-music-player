@@ -1,80 +1,179 @@
 <template>
-  <VContainer fluid class="fill-height">
-    <VRow no-gutters align="center" justify="center" class="fill-height">
-      <VCol cols="12" md="6" lg="5" sm="6">
-        <VRow no-gutters align="center" justify="center">
-          <VCol cols="12" md="6">
-            <h1>Sign In</h1>
-            <p class="text-medium-emphasis">Enter your details to get started</p>
+  <div class="px-lg-14 px-xs-6 px-sm-3 py-3">
+    <home-carousel-card />
 
-            <VForm @submit.prevent="submit" class="mt-7">
-              <div class="mt-1">
-                <label class="label text-grey-darken-2" for="email">Email</label>
-                <VTextField
-                  :rules="[ruleRequired, ruleEmail]"
-                  v-model="email"
-                  prepend-inner-icon="fluent:mail-24-regular"
-                  id="email"
-                  name="email"
-                  type="email"
-                />
-              </div>
-              <div class="mt-1">
-                <label class="label text-grey-darken-2" for="password">Password</label>
-                <VTextField
-                  :rules="[ruleRequired, rulePassLen]"
-                  v-model="password"
-                  prepend-inner-icon="fluent:password-20-regular"
-                  id="password"
-                  name="password"
-                  type="password"
-                />
-              </div>
-              <div class="mt-5">
-                <VBtn type="submit" block min-height="44" class="gradient primary">Sign In</VBtn>
-              </div>
-            </VForm>
-            <p class="text-body-2 mt-10">
-              <NuxtLink to="/reset-password" class="font-weight-bold text-primary"
-                >Forgot password?</NuxtLink
-              >
-            </p>
-            <p class="text-body-2 mt-4">
-              <span
-                >Don't have an account?
-                <NuxtLink to="/signup" class="font-weight-bold text-primary"
-                  >Sign Up</NuxtLink
-                ></span
-              >
-            </p>
-          </VCol>
-        </VRow>
-      </VCol>
-      <VCol class="hidden-md-and-down fill-height" md="6" lg="7">
-        <VImg
-          src="https://wallpaper.dog/large/5557744.jpg"
-          cover
-          class="h-100 rounded-xl d-flex align-center justify-center"
+    <div class="mt-10 text-h5 text-primary d-flex justify-space-between">
+      <span>Explore Trend Categories</span>
+      <span class="text-secondary text-caption my-auto mr-8">SEE ALL</span>
+    </div>
+    <v-container class="px-0 mx-0">
+      <v-row no-gutters>
+        <home-horizontal-card
+          v-for="n in 6"
+          :lg="4"
+          :sm="6"
+          :xs="12"
+          title="Hip-Hop"
+          content="2,585 Track"
         >
-          <div class="text-center w-50 text-white mx-auto">
-            <h2 class="mb-4">Start your journey today</h2>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, inventore quia.
-              Dolorum dolores ad ipsum voluptatum rem, hic placeat, odio, odit numquam quod
-              veritatis accusantium assumenda! Sequi, provident in! Iure!
-            </p>
-          </div>
-        </VImg>
-      </VCol>
-    </VRow>
-  </VContainer>
+          <template v-slot:image>
+            <v-img
+              src="https://cdn.vuetifyjs.com/images/cards/halcyon.png"
+            ></v-img>
+          </template>
+          <template v-slot:action>
+            <v-icon
+              icon="mdi-play-circle-outline"
+              color="secondary"
+              class="bs-cursor-pointer"
+            ></v-icon>
+          </template>
+        </home-horizontal-card>
+      </v-row>
+    </v-container>
+
+    <div class="mt-10 text-h5 text-primary d-flex justify-space-between">
+      <span>Mixed For You</span>
+      <span class="text-secondary text-caption my-auto mr-8">SEE ALL</span>
+    </div>
+    <v-container class="px-0 mx-0">
+      <v-row no-gutters>
+        <home-vertical-card v-for="n in 4" :lg="3" :sm="6" :xs="6">
+          <template v-slot:image>
+            <v-container class="pa-0 ma-0">
+              <v-row class="w-100" no-gutters>
+                <v-avatar class="v-col-6 h-auto w-auto" rounded="0">
+                  <v-img src="/img/billie.png" alt="billie"></v-img>
+                </v-avatar>
+                <v-avatar class="v-col-6 h-auto w-auto" rounded="0">
+                  <v-img src="/img/bendeniz.png" alt="bendeniz"></v-img>
+                </v-avatar>
+                <v-avatar class="v-col-6 h-auto w-auto" rounded="0">
+                  <v-img src="/img/chavoshi.png" alt="chavoshi"></v-img>
+                </v-avatar>
+                <v-avatar class="v-col-6 h-auto w-auto" rounded="0">
+                  <v-img src="/img/moshen.png" alt="moshen"></v-img>
+                </v-avatar>
+              </v-row>
+            </v-container>
+          </template>
+          <template v-slot:title> Mix #4 </template>
+          <template v-slot:content>
+            Taylor Swift, Bendeniz, Moshen Chavoshi, Gryffin
+          </template>
+        </home-vertical-card>
+      </v-row>
+    </v-container>
+
+    <div class="mt-10 text-h5 text-primary d-flex justify-space-between">
+      <span>New Releases</span>
+      <span class="text-secondary text-caption my-auto mr-8">SEE ALL</span>
+    </div>
+    <v-container class="px-0 mx-0">
+      <v-row no-gutters>
+        <home-vertical-card v-for="n in 4" :lg="3" :sm="6" :xs="6">
+          <template v-slot:image>
+            <v-img src="/img/weekend.png" alt="weekend"></v-img>
+          </template>
+          <template v-slot:title>Save Your Tears</template>
+          <template v-slot:content>
+            The Weekend
+            <v-icon size="30" icon="mdi-circle-small"></v-icon>
+            9 May 2023
+          </template>
+        </home-vertical-card>
+      </v-row>
+    </v-container>
+
+    <div class="mt-10 text-h5 text-primary d-flex justify-space-between">
+      <span>Recomended Artists</span>
+      <span class="text-secondary text-caption my-auto mr-8">SEE ALL</span>
+    </div>
+    <v-container class="px-0 mx-0">
+      <v-row no-gutters>
+        <home-vertical-card v-for="n in 4" :lg="3" :sm="6" :xs="6">
+          <template v-slot:image>
+            <div class="bs-bg-blur">
+              <v-img
+                src="/img/billie.png"
+                alt="billie"
+                class="rounded-xxl pa-10"
+              ></v-img>
+            </div>
+          </template>
+          <template v-slot:title> Rihanna </template>
+          <template v-slot:content>
+            180 Tracks
+            <v-icon size="30" icon="mdi-circle-small"></v-icon>
+            5 Albums
+          </template>
+        </home-vertical-card>
+      </v-row>
+    </v-container>
+
+    <div class="mt-10 text-h5 text-primary d-flex justify-space-between">
+      <span>Recomended Music Videos</span>
+      <span class="text-secondary text-caption my-auto mr-8">SEE ALL</span>
+    </div>
+    <v-container class="px-0 mx-0">
+      <v-row no-gutters>
+        <home-vertical-card v-for="n in 2" :lg="6" :sm="6" :xs="12">
+          <template v-slot:image>
+            <v-img src="/img/cover.png" alt="weekend" class="text-center">
+              <div class="w-100 h-100 d-flex flex-col justify-center">
+                <v-icon
+                  icon="mdi-play-outline"
+                  class="my-auto bs-cursor-pointer"
+                ></v-icon>
+              </div>
+            </v-img>
+          </template>
+          <template v-slot:title>I Love It Feet. Andele Givens</template>
+          <template v-slot:content> Kanye West & Lil Pump </template>
+        </home-vertical-card>
+      </v-row>
+    </v-container>
+
+    <div class="mt-10 text-h5 text-primary d-flex justify-space-between">
+      <span>Live Performances</span>
+      <span class="text-secondary text-caption my-auto mr-8">SEE ALL</span>
+    </div>
+    <v-container class="px-0 mx-0">
+      <v-row no-gutters>
+        <home-vertical-card v-for="n in 4" :lg="3" :sm="6" :xs="6">
+          <template v-slot:image>
+            <v-img src="/img/performance.png" alt="weekend"></v-img>
+          </template>
+          <template v-slot:title>Without Me</template>
+          <template v-slot:content>Eminem</template>
+        </home-vertical-card>
+      </v-row>
+    </v-container>
+
+    <div class="mt-10 text-h5 text-primary=">Popular Artists</div>
+    <v-container class="px-0 mx-0">
+      <v-row no-gutters>
+        <home-horizontal-card
+          v-for="n in 9"
+          :lg="4"
+          :sm="6"
+          :xs="12"
+          title="Eminem"
+          content="5,862,148 Follower"
+        >
+          <template v-slot:image>
+            <v-img src="/img/Eminem.png"></v-img>
+          </template>
+          <template v-slot:action>
+            <v-btn
+              variant="outlined"
+              class="font-weight-light text-secondary text-subtitle-1 px-10 ma-1"
+            >
+              FOLLOW
+            </v-btn>
+          </template>
+        </home-horizontal-card>
+      </v-row>
+    </v-container>
+  </div>
 </template>
-
-<script setup>
-const email = ref("")
-const password = ref("")
-
-const { ruleEmail, rulePassLen, ruleRequired } = useFormRules()
-
-const submit = async () => {}
-</script>

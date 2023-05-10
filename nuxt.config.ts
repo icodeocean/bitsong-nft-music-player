@@ -1,17 +1,15 @@
 import vuetify from "vite-plugin-vuetify";
 
-const title = "BitSong Music Player";
-const shortTitle = "Vuetify 3 + Nuxt 3 Starter";
+const shortTitle = "Bitsong NFT Music Player";
 const description =
-  "Template to get you up and running with Nuxt 3 & Vuetify 3";
-const image = "https://vuetify3nuxt3starter.behonbaker.com/starter.png";
-const url = "https://vuetify3nuxt3starter.behonbaker.com/";
+  "Bitsong NFT Music Player";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  // import styles
-  css: ["@/assets/main.scss"],
-  // enable takeover mode
+  css: [
+    "@/assets/main.scss",
+    "@mdi/font/css/materialdesignicons.min.css",
+  ],
   typescript: { shim: false },
   build: { transpile: ["vuetify"] },
   modules: [
@@ -30,8 +28,8 @@ export default defineNuxtConfig({
       link: [
         { rel: "stylesheet", href: "https://rsms.me/inter/inter.css" },
         { rel: "preconnect", href: "https://rsms.me/" },
-        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-        { rel: "canonical", href: url },
+        { rel: "icon", type: "image/x-icon", href: "/icon.svg" },
+        { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Roboto" },
       ],
       meta: [],
     },
@@ -40,7 +38,7 @@ export default defineNuxtConfig({
   pwa: {
     meta: {
       name: shortTitle,
-      author: "Behon Baker",
+      author: "Ted Chow",
       theme_color: "#4f46e5",
       description: description,
     },

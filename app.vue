@@ -1,7 +1,18 @@
 <template>
-  <div>
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-  </div>
+  <div class="background-gradient"></div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
+
+<style scoped>
+.background-gradient {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  background: url("~/assets/img/Gradient.png");
+  opacity: 0.8;
+  filter: blur(90px);
+}
+</style>

@@ -1,20 +1,31 @@
 <template>
-  <v-app-bar :elevation="2" height="100">
+  <v-app-bar
+    :elevation="2"
+    height="100"
+    class="bs-bg-dark bs-border-bottom px-16 d-flex justiny-between"
+  >
     <v-text-field
       hide-details
-      prepend-icon="mdi-magnify"
-      label="search"
+      label="Search"
+      variant="underlined"
+      append-inner-icon="mdi-magnify"
       single-line
     ></v-text-field>
 
-    <v-icon icon="mdi-magnify">
+    <v-spacer></v-spacer>
 
-    </v-icon>
-
-    <v-btn icon>
-      <v-icon>mdi-crosshairs-gps</v-icon>
-    </v-btn>
+    <v-avatar size="56" color="surface-variant">
+      <v-img src="/img/v-avatar.png" alt="John"></v-img>
+    </v-avatar>
+    <div class="ml-2">
+      <p>Ted Chow</p>
+      <p class="text-caption">51.00 ETH</p>
+    </div>
   </v-app-bar>
 </template>
 
-<script></script>
+<style scoped>
+.background {
+  background-color: rgba(33, 33, 33, 0.48);
+}
+</style>
