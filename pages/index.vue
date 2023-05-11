@@ -1,10 +1,12 @@
 <template>
-  <div class="px-lg-14 px-xs-6 px-sm-3 py-3">
+  <div class="px-lg-14 px-xs-6 px-sm-3 py-3 mt-7">
     <home-carousel-card />
 
     <div class="mt-10 text-h5 text-primary d-flex justify-space-between">
       <span>Explore Trend Categories</span>
-      <span class="text-secondary text-caption my-auto mr-8">SEE ALL</span>
+      <NuxtLink class="text-secondary text-capitalize text-caption my-auto mr-8"
+        >see all</NuxtLink
+      >
     </div>
     <v-container class="px-0 mx-0">
       <v-row no-gutters>
@@ -34,7 +36,11 @@
 
     <div class="mt-10 text-h5 text-primary d-flex justify-space-between">
       <span>Mixed For You</span>
-      <span class="text-secondary text-caption my-auto mr-8">SEE ALL</span>
+      <NuxtLink
+        class="text-secondary text-capitalize text-caption my-auto mr-8"
+      >
+        see all
+      </NuxtLink>
     </div>
     <v-container class="px-0 mx-0">
       <v-row no-gutters>
@@ -67,7 +73,11 @@
 
     <div class="mt-10 text-h5 text-primary d-flex justify-space-between">
       <span>New Releases</span>
-      <span class="text-secondary text-caption my-auto mr-8">SEE ALL</span>
+      <NuxtLink
+        class="text-secondary text-capitalize text-caption my-auto mr-8"
+      >
+        see all
+      </NuxtLink>
     </div>
     <v-container class="px-0 mx-0">
       <v-row no-gutters>
@@ -87,7 +97,11 @@
 
     <div class="mt-10 text-h5 text-primary d-flex justify-space-between">
       <span>Recomended Artists</span>
-      <span class="text-secondary text-caption my-auto mr-8">SEE ALL</span>
+      <NuxtLink
+        class="text-secondary text-capitalize text-caption my-auto mr-8"
+      >
+        see all
+      </NuxtLink>
     </div>
     <v-container class="px-0 mx-0">
       <v-row no-gutters>
@@ -113,7 +127,11 @@
 
     <div class="mt-10 text-h5 text-primary d-flex justify-space-between">
       <span>Recomended Music Videos</span>
-      <span class="text-secondary text-caption my-auto mr-8">SEE ALL</span>
+      <NuxtLink
+        class="text-secondary text-capitalize text-caption my-auto mr-8"
+      >
+        see all
+      </NuxtLink>
     </div>
     <v-container class="px-0 mx-0">
       <v-row no-gutters>
@@ -136,7 +154,11 @@
 
     <div class="mt-10 text-h5 text-primary d-flex justify-space-between">
       <span>Live Performances</span>
-      <span class="text-secondary text-caption my-auto mr-8">SEE ALL</span>
+      <NuxtLink
+        class="text-secondary text-capitalize text-caption my-auto mr-8"
+      >
+        see all
+      </NuxtLink>
     </div>
     <v-container class="px-0 mx-0">
       <v-row no-gutters>

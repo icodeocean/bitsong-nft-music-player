@@ -41,9 +41,10 @@ a {
   }
 }
 
-.v-btn {
-  font-weight: 700 !important;
+.v-pagination__item--is-active button {
+  background-color: #FF005C !important;
 }
+
 .label {
   font-weight: 600;
   font-size: 15px;

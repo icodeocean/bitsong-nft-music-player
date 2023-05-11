@@ -7,11 +7,13 @@
     <v-list nav class="text-weight-light">
       <span class="ml-0"> Menu </span>
       <v-list-item
-        v-for="(listItem, index) in listItems"
-        :prepend-icon="listItem.icon"
-        :title="listItem.title"
-        :value="listItem.value"
+        v-for="(menuItem, index) in menuList"
+        :prepend-icon="menuItem.icon"
+        :title="menuItem.title"
+        :value="menuItem.value"
         :key="index"
+        :to="menuItem.to"
+        exact
         class="mb-3 mt-5 text-subtitle-1"
       ></v-list-item>
 
@@ -19,57 +21,18 @@
 
       <span> My Playlists </span>
       <v-list-item
-        v-for="(playList, index) in playLists"
-        :title="playList.title"
-        :value="playList.value"
+        v-for="(listItem, index) in playList"
+        :title="listItem.title"
+        :value="listItem.value"
         :key="index"
+        :to="listItem.to"
         class="mb-3 mt-5 text-subtitle-1"
       ></v-list-item>
     </v-list>
   </v-navigation-drawer>
 </template>
 
-<script setup>
-const listItems = ref([
-  {
-    title: "HOME",
-    value: "home",
-    icon: "mdi-home",
-  },
-  {
-    title: "MY BIDS",
-    value: "myBids",
-    icon: "mdi-currency-usd",
-  },
-  {
-    title: "EXPLORE",
-    value: "explore",
-    icon: "mdi-magnify",
-  },
-  {
-    title: "LIKED SONGS",
-    value: "likedSongs",
-    icon: "mdi-heart-outline",
-  },
-  {
-    title: "LIBRARY",
-    value: "library",
-    icon: "mdi-music-box-multiple-outline",
-  },
-])
-
-const playLists = ref([
-  {
-    title: "playlist #1",
-    value: "playlist1",
-  },
-  {
-    title: "playlist #2",
-    value: "playlist2",
-  },
-  {
-    title: "playlist #3",
-    value: "playlist3",
-  },
-])
+<script setup lang="ts">
+import { useNavList } from "~/composables/useNavList"
+const { menuList, playList } = useNavList()
 </script>
