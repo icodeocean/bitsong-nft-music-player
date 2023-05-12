@@ -11,7 +11,7 @@
   width: 100%;
   height: 100%;
 
-  background: url("~/assets/img/Gradient.png");
+  background: url("~/assets/img/Gradient.png") no-repeat;
   opacity: 0.8;
   filter: blur(90px);
 }
