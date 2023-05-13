@@ -31,7 +31,6 @@ a {
   background-color: #FF005C !important;
 }
 
-// Override the textfield's radius
 .v-text-field {
   .v-field__outline__start {
     border-radius: 10px 0 0 10px !important;
@@ -73,4 +72,8 @@ a {
 .bs-bg-blur {
   background: rgba(33, 33, 33, 0.56);
   backdrop-filter: blur(18px);
+}
+
+.bs-no-transparency {
+  opacity: 1 !important;
 }

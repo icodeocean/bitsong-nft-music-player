@@ -51,3 +51,38 @@ export const useNavList = () => {
     ],
   }
 }
+
+export const useUserMenuList = () => {
+  return [
+    {
+      title: "Information",
+      value: "information",
+      icon: "mdi-account",
+      to: "/profile/information",
+    },
+    {
+      title: "Wallet",
+      value: "wallet",
+      icon: "mdi-wallet",
+      to: "/mybids",
+    },
+    {
+      title: "Create NFT",
+      value: "createNFT",
+      icon: "mdi-plus-circle-multiple-outline",
+      to: "explore",
+    },
+    {
+      title: "My NFTs",
+      value: "myNFTs",
+      icon: "mdi-bookmark-box",
+      to: "/liked",
+    },
+    {
+      title: "Log Out",
+      value: "logOut",
+      icon: "mdi-logout",
+      to: "library",
+    },
+  ]
+}

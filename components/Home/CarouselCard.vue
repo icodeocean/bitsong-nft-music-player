@@ -22,13 +22,19 @@
             variant="outlined"
             class="font-weight-light text-secondary text-subtitle-1 px-6 ma-1"
           >
-            <v-icon icon="mdi-heart"></v-icon>2, 585 LIKE
+            <span class="mr-1 text-body-1 d-flex align-center">
+              <v-icon icon="mdi:mdi-heart" class="h-auto"></v-icon>
+            </span>
+            <span class="my-auto">2, 585 LIKE</span>
           </v-btn>
           <v-btn
             color="secondary"
             class="font-weight-light text-subtitle-1 px-6 ma-1"
           >
-            <v-icon icon="mdi-play-circle"></v-icon>PLAY NOW
+            <span class="mr-1 text-body-1 d-flex align-center">
+              <v-icon icon="mdi:mdi-play-circle" class="h-auto"></v-icon>
+            </span>
+            <span class="my-auto">Play Now</span>
           </v-btn>
         </div>
       </div>
