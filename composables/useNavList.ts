@@ -17,7 +17,7 @@ export const useNavList = () => {
         title: "EXPLORE",
         value: "explore",
         icon: "mdi-magnify",
-        to: "explore",
+        to: "/explore",
       },
       {
         title: "LIKED SONGS",
@@ -70,7 +70,7 @@ export const useUserMenuList = () => {
       title: "Create NFT",
       value: "createNFT",
       icon: "mdi-plus-circle-multiple-outline",
-      to: "explore",
+      to: "/explore",
     },
     {
       title: "My NFTs",
